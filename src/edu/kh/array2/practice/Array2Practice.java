@@ -208,9 +208,66 @@ public class Array2Practice {
 	
 	public void practice9() {
 		
+		String arr[][] = new String[6][6];
+		
+		System.out.print("행 인덱스 입력 : ");
+		int row = sc.nextInt();
+		System.out.print("열 인덱스 입력 : ");
+		int cow = sc.nextInt();
+		
+		for(int x = 0; x < arr.length; x++) {
+			for(int y = 0; y < arr.length; y++) {
+				if(y == 0 && x != 0) {
+					System.out.print(x - 1 + " ");
+				} else if(y != 0 && x == 0) {
+					System.out.print(y - 1 + " ");
+				} else if(x - 1 == row && cow == y - 1) {
+					System.out.print('X');
+				} else {
+					System.out.print("  ");
+				}
+			}
+			System.out.println();
+		}
+		
 	}
 	
 	public void practice10() {
+		
+		String arr[][] = new String[6][6];
+		
+		do {
+			System.out.print("행 인덱스 입력 : ");
+			int row = sc.nextInt();
+			if(row == 99) {
+				System.out.println("프로그램 종료");
+				break;
+			} else {
+				System.out.print("열 인덱스 입력 : ");
+				int cow = sc.nextInt();
+				
+				for(int x = 0; x < arr.length; x++) {
+					for(int y = 0; y < arr.length; y++) {
+						if(y == 0 && x != 0) {
+							System.out.print(x - 1 + " ");
+						} else if(y != 0 && x == 0) {
+							System.out.print(y - 1 + " ");
+						} else if(x - 1 == row && cow == y - 1) {
+							arr[x][y] = "X ";
+							System.out.print(arr[x][y]);
+						} else if(arr[x][y] == "X "){
+							System.out.print("X ");
+						} else {
+							System.out.print("  ");
+						}
+					}
+					System.out.println();
+				}
+			}						
+		}while(true);
+		
+		
+		
 		
 	}
 

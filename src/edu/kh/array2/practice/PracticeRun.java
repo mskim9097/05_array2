@@ -12,9 +12,9 @@ public class PracticeRun {
 		//ex.practice5();
 		//ex.practice6();
 		//ex.practice7();
-		ex.practice8();
+		//ex.practice8();
 		//ex.practice9();
-		//ex.practice10();
+		ex.practice10();
 		
 	}
 }
