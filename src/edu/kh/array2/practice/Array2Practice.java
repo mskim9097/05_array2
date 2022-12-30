@@ -51,17 +51,24 @@ public class Array2Practice {
 	
 	public void practice4() { // 나중에 다시풀기@@@@@@@@@@@@@@@@@
 		
+		
 		int[][]arr = new int[4][4];
+		
 		
 		
 		for(int i = 0; i < arr.length ; i++) {
 			for(int j = 0; j < arr[i].length ; j++) {
-				if(i < 3 && j < 3) {
-					arr[i][j] = (int)(Math.random() * 10 + 1);	
-				}else if(j == 3 || i != 3) {
-					int iSum = 0;
+
+				if(i != 3 && j != 3) {
+					arr[i][j] = (int)(Math.random() * 10 + 1);
+					
+					arr[i][3] += arr[i][j];
+					arr[3][j] += arr[i][j];
+					arr[3][3] += arr[i][j];
 				}
+				System.out.printf("%2d ", arr[i][j]);
 			}
+			System.out.println();
 		}
 		
 	}
